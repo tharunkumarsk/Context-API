@@ -1,0 +1,40 @@
+{
+  "name": "context-api",
+  "version": "1.0.0",
+  "description": "Context provides a way to pass data through the component tree without having to pass props down manually at every level.",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tharunkumarsk/Context-API.git"
+  },
+  "author": "Tharunkumar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tharunkumarsk/Context-API/issues"
+  },
+  "homepage": "https://github.com/tharunkumarsk/Context-API#readme",
+  "dependencies": {
+    "babel": "^6.23.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.2",
+    "@babel/plugin-proposal-class-properties": "^7.7.0",
+    "@babel/preset-react": "^7.7.0",
+    "parcel-bundler": "^1.6.1",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ],
+    "plugins": [
+      "@babel/plugin-proposal-class-properties"
+    ]
+  }
+}
