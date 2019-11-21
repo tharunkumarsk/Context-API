@@ -1,7 +1,8 @@
 import React from 'react';
 import { render } from 'react-dom';
+import GrandChild from './GrandChild';
+import DataContextProvider from './DataContext';
 
-const Context = React.createContext()
 
 function Parent () {
   return (
@@ -16,33 +17,18 @@ function Child () {
   return (
     <div>
       <h1>Child</h1>
-      <Grandchild/>
+      <DataContextProvider>
+      <GrandChild/>
+      </DataContextProvider>
     </div>
-  );
-}
-
-function Grandchild () {
-  return (
-      <Context.Consumer>
-          {(name) =>
-            <div>
-            <h1>Grandchild</h1>
-            <h3>Name: {name}</h3>
-            </div>
-          }
-      </Context.Consumer>
-   
   );
 }
 
 class App extends React.Component {
   render() {
-    const name = 'Tharunkumar';
-
+   
     return (
-        <Context.Provider value ={name}>
             <Parent />
-        </Context.Provider>
       
     );
   }
